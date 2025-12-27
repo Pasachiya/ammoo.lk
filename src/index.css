@@ -1,0 +1,87 @@
+:root {
+  /* Yellow theme variables */
+  --yellow-50: #fffdea;
+  --yellow-100: #fff8d1;
+  --yellow-300: #ffe36b;
+  --yellow-500: #ffcf33;
+  --yellow-700: #e6b800;
+  --black: #0a0a0a;
+  --black-light: #171717;
+  --black-lighter: #262626;
+  --bg: linear-gradient(180deg, #fffdf6, #fff8ea);
+  --text: #1d1d1f;
+  --muted: #6b5b3a;
+  --text-on-yellow: #1d1d1f;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--black) 0%, var(--black-light) 50%, #1a1a0a 100%);
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #ffffff;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--yellow-500);
+  color: var(--text-on-yellow);
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+button:hover { transform: translateY(-1px); }
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: linear-gradient(135deg, var(--black) 0%, var(--black-light) 50%, #1a1a0a 100%);
+    --text: #fff;
+    --muted: #cfcfcf;
+  }
+}
+
+/* Utility layout */
+.page-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  flex: 1 0 auto;
+}
